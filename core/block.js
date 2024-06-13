@@ -123,12 +123,6 @@ Blockly.Block = function(workspace, prototypeName, opt_id) {
 
   /**
    * @type {boolean}
-   * @private
-   */
-  this.isShadowArgument_ = false;
-
-  /**
-   * @type {boolean}
    * @protected
    */
   this.collapsed_ = false;

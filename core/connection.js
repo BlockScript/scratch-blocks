@@ -309,10 +309,10 @@ Blockly.Connection.prototype.canConnectWithReason_ = function(target) {
   }
   if (blockA && blockA == blockB) {
     return Blockly.Connection.REASON_SELF_CONNECTION;
-  } else if (true) { // Allow everything
-    return Blockly.Connection.CAN_CONNECT;
+  /* Let's not worry about this one
   } else if (target.type != Blockly.OPPOSITE_TYPE[this.type]) {
     return Blockly.Connection.REASON_WRONG_TYPE;
+  */
   } else if (blockA && blockB && blockA.workspace !== blockB.workspace) {
     return Blockly.Connection.REASON_DIFFERENT_WORKSPACES;
   } else if (!this.checkType_(target)) {

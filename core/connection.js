@@ -309,14 +309,16 @@ Blockly.Connection.prototype.canConnectWithReason_ = function(target) {
   }
   if (blockA && blockA == blockB) {
     return Blockly.Connection.REASON_SELF_CONNECTION;
-  /* Let's not worry about this one
+  /*
   } else if (target.type != Blockly.OPPOSITE_TYPE[this.type]) {
     return Blockly.Connection.REASON_WRONG_TYPE;
   */
   } else if (blockA && blockB && blockA.workspace !== blockB.workspace) {
     return Blockly.Connection.REASON_DIFFERENT_WORKSPACES;
+  /*
   } else if (!this.checkType_(target)) {
     return Blockly.Connection.REASON_CHECKS_FAILED;
+  */
   } else if (blockA.isShadow() && !blockB.isShadow()) {
     return Blockly.Connection.REASON_SHADOW_PARENT;
   } else if ((blockA.type == Blockly.PROCEDURES_DEFINITION_BLOCK_TYPE &&
